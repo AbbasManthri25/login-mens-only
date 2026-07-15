@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-display: "Anton", sans-serif;
+  --font-body: "Poppins", sans-serif;
+
+  /* Brand Colors - buttons white, accents black */
+  --color-gold: #ffffff;
+  --color-gold-light: #f2f2f2;
+  --color-gold-dark: #000000;
+
+  /* Text */
+  --color-ink: #000000;
+
+  /* Background Shades */
+  --color-cream: #ffff00;
+  --color-charcoal: #fffde7;
+  --color-graphite: #fff9c4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow that can create an unwanted scroll bar */
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-dark);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Accent headline text - solid black */
+.text-gradient-gold {
+  color: var(--color-ink);
+}
+
+/* Premium Noise Texture */
+.bg-noise {
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.14) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
